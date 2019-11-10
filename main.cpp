@@ -10,8 +10,8 @@
 #include "DrunkardRandomWalk.hpp"
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
     double output;
+    //Output solution to drunken walk given paramters
     output = DrunkenWalkProbability(11, 0.6, 7, 100000);
     std::cout << output << std::endl;
     return 0;

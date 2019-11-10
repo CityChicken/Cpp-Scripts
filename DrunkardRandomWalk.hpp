@@ -11,6 +11,9 @@
 #include <stdio.h>
 #include <cstdlib>
 int SimulateWalk(int n, double p, int x){
+    //simulate drunken walk given home at position N,
+    //probability of right (positive) move p and starting
+    //position at x
     double rand_num;
     int move;
     int outcome;
@@ -33,6 +36,11 @@ int SimulateWalk(int n, double p, int x){
 }
 
 double DrunkenWalkProbability(int n, double p, int x, int sims){
+    //collect running total of simulation outcomes and divide by
+    //the number of simulations to compute the probability
+    //simulating drunken walk given home at position N,
+    //probability of right (positive) move p and starting
+    //position at x
     int count_home = 0;
     for (int iter = 1; iter <= sims; iter++) {
         count_home += SimulateWalk(n, p, x);
